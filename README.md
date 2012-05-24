@@ -19,3 +19,4 @@ From https://www.prowlapp.com/api_settings.php
 
 ### Step 4: Create a Papertrail webhook
 
+Find out more info here: http://help.papertrailapp.com/kb/how-it-works/web-hooks
