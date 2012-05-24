@@ -18,7 +18,7 @@ module PapertrailProwlWebhook
           n.application = 'Papertrail'
           n.event       = event[:hostname]
           n.description = event[:message]
-          n.url         = "#{payload[:saved_search][:html_seach_url]}?center_on_id=#{event[:id]}"
+          n.url         = "#{payload[:saved_search][:html_search_url]}?center_on_id=#{event[:id]}"
         end
       end
 
