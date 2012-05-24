@@ -5,6 +5,6 @@ gem 'yajl-ruby'
 gem 'prowly'
 gem 'activesupport', '~> 2.3', :require => 'active_support'
 
-group :deployment do
+group :development do
   gem 'heroku'
 end
