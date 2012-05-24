@@ -1,3 +1,7 @@
+require 'yajl'
+require 'active_support'
+require 'prowly'
+
 module PapertrailProwlWebhook
   class App < Sinatra::Base
     get '/' do
