@@ -13,10 +13,12 @@ module PapertrailProwlWebhook
 
       payload[:events].each do |event|
         Prowly.notify do |n|
-          n.apikey = ENV['PROWL_API_KEY']
-          n.priority = Prowly::Notification::Priority::MODERATE
-          n.event = event[:hostname]
+          n.apikey      = ENV['PROWL_API_KEY']
+          n.priority    = Prowly::Notification::Priority::NORMAL
+          n.application = 'Papertrail'
+          n.event       = event[:hostname]
           n.description = event[:message]
+          n.url         = "#{payload[:saved_search][:html_seach_url]}?center_on_id=#{event[:id]}"
         end
       end
 
