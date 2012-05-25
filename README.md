@@ -20,3 +20,13 @@ From https://www.prowlapp.com/api_settings.php
 ### Step 4: Create a Papertrail webhook
 
 Find out more info here: http://help.papertrailapp.com/kb/how-it-works/web-hooks
+
+## Using
+
+Once you've created a saved search in Papertrail and configured the search
+alert, you can now send log messages that match that message.
+
+For example, if your saved search matches `ops-alert`, you could use this 
+to alert you when a big transfer has completed:
+
+    $ rsync -R /backup backup:/backup ; logger -t ops-alert The transfer has completed
