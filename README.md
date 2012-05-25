@@ -17,9 +17,13 @@ From https://www.prowlapp.com/api_settings.php
 
     $ heroku config:add PROWL_API_KEY=69fd475972db19b6c2ee1f68d08acff1c4bcbf5b
 
-### Step 4: Create a Papertrail webhook
+### Step 4: Create a Papertrail saved search
 
-Find out more info here: http://help.papertrailapp.com/kb/how-it-works/web-hooks
+1. Create a saved search for a unique term (something like `ops-alert` would work)
+2. Create a search alert (webhook) pointing to your heroku app pointing to `/submit`
+
+Find out more about search alerts and webhooks here: http://help.papertrailapp.com/kb/how-it-works/web-hooks
+
 
 ## Using
 
